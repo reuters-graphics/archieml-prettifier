@@ -14,8 +14,8 @@ function onInstall(e) {
 const whitespacePattern = ' ';
 const slugBlacklist = whitespacePattern + '\[\\\]\{\}\:';
 const startKey = new RegExp('^\\s*([^' + slugBlacklist + ']+)[ \t\r]*:[ \t\r]*').toString().slice(1,-1);
-const commandKey = new RegExp('^\\s*:[ \t\r]*(endskip|ignore|skip|end).*?(\n|\r|$)', 'i').toString().slice(1,-1);
-const arrayElement = new RegExp('^\\s*\\*[ \t\r]*').toString().slice(1,-1);
+const commandKey = new RegExp('^\\s*:[ \t\r]*(endskip|ignore|skip|end)').toString().slice(1,-1);
+const arrayElement = new RegExp('^\\s*\\*[ \t\r]+').toString().slice(1,-1);
 const scopePattern = new RegExp('^\\s*(\\[|\\{)[ \t\r]*([\+\.]*)[ \t\r]*([^' + slugBlacklist + ']*)[ \t\r]*(?:\\]|\\})').toString().slice(1,-1);
 const mustache = new RegExp('{{.*?}}').toString().slice(1,-1);
 const comments = new RegExp('^#\\s*.*$').toString().slice(1,-1);
