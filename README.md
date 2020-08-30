@@ -39,3 +39,5 @@ Google Apps Script to prettify [ArchieML](http://archieml.org/) formatted docs.
 <img src='images/authorization.png' height='140' />
 
 8. Once you've authorized the script, you can now use the Add-on options.
+
+<img src='images/options.png' height='140' />
