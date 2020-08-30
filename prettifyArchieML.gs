@@ -78,7 +78,17 @@ function prettifyComments() {
   }
 }
 
+function resetDocument() {
+  const body = DocumentApp.getActiveDocument().getBody();
+  const text = body.editAsText();
+  text.setBold(false);
+  text.setFontFamily('Arial');
+  text.setForegroundColor("#000000");
+  text.setBackgroundColor("#ffffff");
+}
+
 function prettifyAll() {
+  resetDocument();
   prettifyArchieML();
   prettifyMustaches();
   prettifyComments();
